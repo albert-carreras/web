@@ -172,7 +172,7 @@
 			border: 1px solid transparent;
 		}
 
-		.link:hover:not(.past-project) {
+		.link:hover {
 			background: var(--color-background);
 			border-color: var(--color-primary);
 			transform: translateX(8px);
@@ -184,6 +184,14 @@
 
 		.past-project:hover {
 			opacity: 0.9;
+		}
+
+		.past-work {
+			opacity: 0.85;
+		}
+
+		.past-work:hover {
+			opacity: 1;
 		}
 
 		.link .feather {
@@ -299,15 +307,14 @@
 
 		<main class="sections">
 			<section class="section">
-				<div class="section-title">Current Work</div>
+				<div class="section-title">Work</div>
 				<div class="section-content">
 					<div class="links">
-						<a href="#" class="link">
+						<a href="https://m47labs.com" class="link" target="_blank" rel="noopener">
 							<i data-feather="briefcase"></i>
 							<div>
 								<div class="link-title">Engineering Manager at M47 Labs</div>
-								<div class="link-description">Leading engineering teams in building innovative solutions
-								</div>
+								<div class="link-description">Leading engineering teams, building AI solutions</div>
 							</div>
 						</a>
 						<a href="https://triskale.com" class="link" target="_blank" rel="noopener">
@@ -316,6 +323,14 @@
 								<div class="link-title">Founder at Triskale</div>
 								<div class="link-description">Empowering businesses through AI consulting and custom
 									solutions</div>
+							</div>
+						</a>
+						<a href="https://www.studocu.com" class="link past-work" target="_blank" rel="noopener">
+							<i data-feather="book-open"></i>
+							<div>
+								<div class="link-title">Senior Engineering Manager at Studocu ~2023</div>
+								<div class="link-description">Led multiple engineering teams, driving educational
+									technology innovation</div>
 							</div>
 						</a>
 					</div>
@@ -337,16 +352,16 @@
 						<a href="https://goseren.com" class="link past-project" target="_blank" rel="noopener">
 							<img src="seren.png" alt="Seren icon" class="project-icon">
 							<div>
-								<div class="link-title">Seren - 2024 🪦
+								<div class="link-title">Seren ~2024 🪦
 								</div>
-								<div class="link-description">Smart journaling platform focused on personal development
+								<div class="link-description">AI journaling platform focused building a knowledge base
 									– discontinued</div>
 							</div>
 						</a>
 						<a href="https://ananas.club" class="link past-project" target="_blank" rel="noopener">
 							<img src="ananas.jpg" alt="Ananas icon" class="project-icon">
 							<div>
-								<div class="link-title">Ananas - 2020 🪦</div>
+								<div class="link-title">Ananas ~2020 🪦</div>
 								<div class="link-description">Language exchange platform connecting learners –
 									discontinued</div>
 							</div>
@@ -363,14 +378,14 @@
 							<i data-feather="linkedin"></i>
 							<div>
 								<div class="link-title">LinkedIn</div>
-								<div class="link-description">Connect professionally and follow my career journey</div>
+								<div class="link-description">Check my complete career and connect!</div>
 							</div>
 						</a>
 						<a href="https://github.com/albert-carreras" class="link" target="_blank" rel="noopener">
 							<i data-feather="github"></i>
 							<div>
 								<div class="link-title">GitHub</div>
-								<div class="link-description">Explore my open source contributions and personal projects
+								<div class="link-description">Check personal projects and open source contributions
 								</div>
 							</div>
 						</a>
