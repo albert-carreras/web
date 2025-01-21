@@ -46,7 +46,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Amiri:ital@0;1&family=Inter:wght@200;400;500;600&display=swap"
 		rel="stylesheet">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"></script>
 
 	<style>
 		:root {
@@ -55,11 +54,7 @@
 			--color-text-primary: #2D2D2D;
 			--color-text-secondary: #686764;
 			--color-background: #FDFBF7;
-			--color-1: #e4a0a6;
 			--color-2: #d4a0b6;
-			--color-3: #c4a0c6;
-			--color-4: #b4a0d6;
-			--color-5: #a4a0e6;
 			--transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		}
 
@@ -102,6 +97,7 @@
 
 		.location {
 			display: inline-flex;
+			align-items: center;
 			gap: 0.5rem;
 			padding: 0.5rem 1rem;
 			background: var(--color-2);
@@ -109,6 +105,13 @@
 			font-size: 0.875rem;
 			border-radius: 20px;
 			transition: var(--transition-smooth);
+		}
+
+		.location-icon {
+			width: 20px;
+			height: 20px;
+			border-radius: 5px;
+			filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(86deg) brightness(101%) contrast(106%);
 		}
 
 		h1 {
@@ -207,22 +210,15 @@
 			opacity: 1;
 		}
 
-		.link .feather {
-			width: 24px;
-			height: 24px;
-			color: var(--color-3);
-			transition: var(--transition-smooth);
-		}
-
-		.project-icon {
-			width: 32px;
-			height: 32px;
+		.icon {
+			width: 52px;
+			height: 52px;
 			border-radius: 8px;
 			object-fit: cover;
 		}
 
-		.link:hover .feather {
-			transform: scale(1.1);
+		.gif {
+			border-radius: 0;
 		}
 
 		.link-title {
@@ -235,28 +231,6 @@
 			font-size: 0.925rem;
 			color: var(--color-text-secondary);
 			line-height: 1.5;
-		}
-
-		.skills {
-			display: grid;
-			gap: 2rem;
-		}
-
-		.skill-group {
-			display: grid;
-			gap: 0.5rem;
-		}
-
-		.skill-title {
-			font-weight: 500;
-			color: var(--color-text-secondary);
-			font-size: 0.925rem;
-		}
-
-		.skill-items {
-			color: var(--color-text-primary);
-			font-size: 1.1rem;
-			line-height: 1.6;
 		}
 
 		footer {
@@ -313,7 +287,7 @@
 			<h1>Albert Carreras</h1>
 			<p class="subtitle">Engineering Manager - Full-Stack Developer</p>
 			<div class="location">
-				<i data-feather="map-pin"></i>
+				<img src="location.svg" alt="Location icon" class="location-icon">
 				Barcelona
 			</div>
 		</header>
@@ -324,14 +298,14 @@
 				<div class="section-content">
 					<div class="links">
 						<a href="#" class="link">
-							<i data-feather="briefcase"></i>
+							<img src="m47.svg" alt="M47 Labs icon" class="icon">
 							<div>
 								<div class="link-title">Engineering Manager at M47 Labs</div>
 								<div class="link-description">Leading engineering teams, building AI solutions</div>
 							</div>
 						</a>
 						<a href="https://triskale.com" class="link" target="_blank" rel="noopener">
-							<i data-feather="compass"></i>
+							<img src="triskale.png" alt="Triskale icon" class="icon">
 							<div>
 								<div class="link-title">Founder at Triskale</div>
 								<div class="link-description">Empowering businesses through AI consulting and custom
@@ -339,7 +313,7 @@
 							</div>
 						</a>
 						<a href="https://www.studocu.com" class="link past-work" target="_blank" rel="noopener">
-							<i data-feather="book-open"></i>
+							<img src="studocu.jpg" alt="Studocu icon" class="icon">
 							<div>
 								<div class="link-title">Senior Engineering Manager at Studocu 2019-2024</div>
 								<div class="link-description">Led multiple engineering teams, driving educational
@@ -355,24 +329,23 @@
 				<div class="section-content">
 					<div class="links">
 						<a href="https://habby.day" class="link" target="_blank" rel="noopener">
-							<img src="habby.png" alt="Habby icon" class="project-icon">
+							<img src="habby.png" alt="Habby icon" class="icon">
 							<div>
 								<div class="link-title">Habby</div>
-								<div class="link-description">A simple bullet journal app designed for
-									daily reflection and personal growth</div>
+								<div class="link-description">A simple bullet journal app designed for daily reflection
+									and personal growth</div>
 							</div>
 						</a>
 						<a href="https://goseren.com" class="link past-project" target="_blank" rel="noopener">
-							<img src="seren.png" alt="Seren icon" class="project-icon">
+							<img src="seren.png" alt="Seren icon" class="icon">
 							<div>
-								<div class="link-title">Seren - 2024 🪦
-								</div>
-								<div class="link-description">AI journaling platform focused building a knowledge base
-									– discontinued</div>
+								<div class="link-title">Seren - 2024 🪦</div>
+								<div class="link-description">AI journaling platform focused building a knowledge base –
+									discontinued</div>
 							</div>
 						</a>
 						<a href="https://ananas.club" class="link past-project" target="_blank" rel="noopener">
-							<img src="ananas.jpg" alt="Ananas icon" class="project-icon">
+							<img src="ananas.jpg" alt="Ananas icon" class="icon">
 							<div>
 								<div class="link-title">Ananas - 2020 🪦</div>
 								<div class="link-description">Language exchange platform connecting learners –
@@ -388,14 +361,14 @@
 				<div class="section-content">
 					<div class="links">
 						<a href="https://www.linkedin.com/in/albcarreras/" class="link" target="_blank" rel="noopener">
-							<i data-feather="linkedin"></i>
+							<img src="linkedin.gif" alt="LinkedIn icon" class="icon gif">
 							<div>
 								<div class="link-title">LinkedIn</div>
 								<div class="link-description">Check my complete career and connect!</div>
 							</div>
 						</a>
 						<a href="https://github.com/albert-carreras" class="link" target="_blank" rel="noopener">
-							<i data-feather="github"></i>
+							<img src="github.gif" alt="GitHub icon" class="icon gif">
 							<div>
 								<div class="link-title">GitHub</div>
 								<div class="link-description">Check personal projects and open source contributions
@@ -403,7 +376,7 @@
 							</div>
 						</a>
 						<a href="mailto:me@bored.cat" class="link">
-							<i data-feather="mail"></i>
+							<img src="email.gif" alt="Email icon" class="icon gif">
 							<div>
 								<div class="link-title">Email</div>
 								<div class="link-description">me@bored.cat</div>
@@ -420,10 +393,6 @@
 			</p>
 		</footer>
 	</div>
-
-	<script>
-		feather.replace();
-	</script>
 </body>
 
 </html>
