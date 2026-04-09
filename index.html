@@ -16,25 +16,25 @@
 
 	<!-- Primary Meta Tags -->
 	<meta name="description"
-		content="Albert Carreras is an Engineering Manager at M47 Labs and founder of Triskale, specializing in engineering leadership and consulting and full-stack development. Based in Barcelona.">
+		content="Albert Carreras is an Engineering Manager at Rover. Engineering leadership, full-stack development, and side projects. Based in Barcelona.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content="Albert Carreras">
 	<meta name="keywords"
-		content="Albert Carreras, Engineering Manager, Full-Stack Developer, AI Engineer, Barcelona, M47 Labs, Triskale">
+		content="Albert Carreras, Engineering Manager, Full-Stack Developer, Barcelona, Rover, Triskale">
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://bored.cat">
 	<meta property="og:title" content="Albert Carreras | Engineering Manager & Full-Stack Developer">
 	<meta property="og:description"
-		content="Engineering Manager at M47 Labs and founder of Triskale, specializing in AI consulting and full-stack development. Based in Barcelona.">
+		content="Engineering Manager at Rover. Engineering leadership, full-stack development, and side projects. Based in Barcelona.">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="https://bored.cat">
 	<meta property="twitter:title" content="Albert Carreras | Engineering Manager & Full-Stack Developer">
 	<meta property="twitter:description"
-		content="Engineering Manager at M47 Labs and founder of Triskale, specializing in AI consulting and full-stack development. Based in Barcelona.">
+		content="Engineering Manager at Rover. Engineering leadership, full-stack development, and side projects. Based in Barcelona.">
 
 	<!-- Favicons -->
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -49,13 +49,12 @@
 
 	<style>
 		:root {
-			--color-primary: #B6C7AA;
-			--color-secondary: #F6E6CB;
-			--color-text-primary: #2D2D2D;
-			--color-text-secondary: #686764;
+			--color-text-primary: #1a1a1a;
+			--color-text-secondary: #6b6b6b;
+			--color-text-tertiary: #999;
 			--color-background: #FDFBF7;
-			--color-2: #d4a0b6;
-			--transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+			--color-rule: #e0dcd6;
+			--transition-smooth: all 0.2s ease;
 		}
 
 		* {
@@ -68,19 +67,20 @@
 			font-family: 'Inter', sans-serif;
 			background-color: var(--color-background);
 			color: var(--color-text-primary);
-			line-height: 1.6;
-			padding: 2rem;
+			line-height: 1.7;
+			padding: 3rem 2rem;
+			-webkit-font-smoothing: antialiased;
 		}
 
 		.container {
-			max-width: 800px;
+			max-width: 680px;
 			margin: 0 auto;
-			padding: 2rem;
+			padding: 2rem 0;
 		}
 
 		.header {
-			margin: 0 0 4em 0;
-			animation: fadeIn 1s ease-out;
+			margin: 0 0 3rem 0;
+			animation: fadeIn 0.8s ease-out;
 		}
 
 		@keyframes fadeIn {
@@ -98,123 +98,99 @@
 		.location {
 			display: inline-flex;
 			align-items: center;
-			gap: 0.5rem;
-			padding: 0.5rem 1rem;
-			background: var(--color-2);
-			color: white;
+			gap: 0.35rem;
+			color: var(--color-text-secondary);
 			font-size: 0.875rem;
-			border-radius: 20px;
-			transition: var(--transition-smooth);
 		}
 
 		.location-icon {
-			width: 20px;
-			height: 20px;
-			border-radius: 5px;
-			filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(86deg) brightness(101%) contrast(106%);
+			width: 16px;
+			height: 16px;
+			opacity: 0.6;
 		}
 
 		h1 {
 			font-family: 'Amiri', serif;
-			font-size: 3.5rem;
+			font-size: 3rem;
 			font-weight: normal;
 			color: var(--color-text-primary);
+			line-height: 1.1;
+			margin-bottom: 0.5rem;
 		}
 
 		.subtitle {
-			font-family: 'Amiri', serif;
-			font-size: 2rem;
+			font-family: 'Inter', sans-serif;
+			font-size: 1rem;
+			font-weight: 400;
 			color: var(--color-text-secondary);
-			margin-bottom: 1rem;
+			margin-bottom: 0.75rem;
+			letter-spacing: 0.01em;
 		}
 
 		.sections {
 			display: grid;
-			gap: 3rem;
-			animation: slideUp 1s ease-out;
-		}
-
-		@keyframes slideUp {
-			from {
-				opacity: 0;
-				transform: translateY(40px);
-			}
-
-			to {
-				opacity: 1;
-				transform: translateY(0);
-			}
+			gap: 2.5rem;
+			animation: fadeIn 1s ease-out 0.2s both;
 		}
 
 		.section {
 			position: relative;
-			padding: 2.5rem;
-			background: white;
-			border-radius: 24px;
-			margin-bottom: 2rem;
-			box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-			transition: var(--transition-smooth);
-		}
-
-		.section:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+			padding: 0;
+			border-top: 1px solid var(--color-rule);
+			padding-top: 1.5rem;
 		}
 
 		.section-title {
 			font-family: 'Inter', sans-serif;
-			font-size: 1.1rem;
+			font-size: 0.75rem;
 			font-weight: 500;
-			color: var(--color-text-secondary);
-			margin-bottom: 2rem;
-			letter-spacing: 0.05em;
+			color: var(--color-text-tertiary);
+			margin-bottom: 1.5rem;
+			letter-spacing: 0.1em;
 			text-transform: uppercase;
 		}
 
 		.links {
 			display: grid;
-			gap: 1.25rem;
+			gap: 0.5rem;
 		}
 
 		.link {
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
 			gap: 1rem;
 			color: var(--color-text-primary);
 			text-decoration: none;
-			padding: 1rem;
-			border-radius: 12px;
+			padding: 0.75rem 0;
 			transition: var(--transition-smooth);
-			border: 1px solid transparent;
 		}
 
 		.link:hover {
-			background: var(--color-background);
-			border-color: var(--color-primary);
-			transform: translateX(8px);
+			opacity: 0.7;
 		}
 
-		.past-project {
-			opacity: 0.75;
+		.subsection-title {
+			font-size: 0.8rem;
+			font-weight: 500;
+			color: var(--color-text-tertiary);
+			margin-top: 1.25rem;
+			margin-bottom: 0.25rem;
 		}
 
-		.past-project:hover {
-			opacity: 0.9;
-		}
-
-		.past-work {
-			opacity: 0.75;
-		}
-
-		.past-work:hover {
-			opacity: 1;
+		.subsection-title:first-child {
+			margin-top: 0;
 		}
 
 		.icon {
-			width: 52px;
-			height: 52px;
-			border-radius: 8px;
+			width: 44px;
+			height: 44px;
+			border-radius: 10px;
 			object-fit: cover;
+			margin-top: 2px;
+		}
+
+		.icon-contain {
+			object-fit: contain;
 		}
 
 		.gif {
@@ -222,53 +198,59 @@
 		}
 
 		.link-title {
-			font-weight: 600;
-			margin-bottom: 0.25rem;
-			font-size: 1.1rem;
+			font-weight: 500;
+			margin-bottom: 0.15rem;
+			font-size: 1rem;
+			line-height: 1.4;
+		}
+
+		.link-date {
+			font-size: 0.8rem;
+			font-weight: 400;
+			color: var(--color-text-tertiary);
+			margin-left: 0.5rem;
 		}
 
 		.link-description {
-			font-size: 0.925rem;
+			font-size: 0.875rem;
 			color: var(--color-text-secondary);
-			line-height: 1.5;
+			line-height: 1.55;
 		}
 
 		footer {
 			text-align: center;
-			margin-top: 6rem;
-			padding: 2rem;
-			color: var(--color-text-secondary);
-			font-size: 0.925rem;
+			margin-top: 3rem;
+			padding: 2rem 0;
+			color: var(--color-text-tertiary);
+			font-size: 0.8rem;
+			border-top: 1px solid var(--color-rule);
 			animation: fadeIn 1.5s ease-out;
 		}
 
 		@media (max-width: 768px) {
 			body {
-				padding: 1rem;
+				padding: 1.5rem 1.25rem;
 			}
 
 			.container {
-				padding: 1rem;
+				padding: 1rem 0;
 			}
 
 			h1 {
-				font-size: 3rem;
-			}
-
-			.subtitle {
-				font-size: 1.5rem;
+				font-size: 2.5rem;
 			}
 
 			.header {
-				margin: 3rem 0;
+				margin: 0 0 3.5rem 0;
 			}
 
-			.section {
-				padding: 1.5rem;
+			.sections {
+				gap: 3rem;
 			}
 
-			.link {
-				padding: 0.75rem;
+			.icon {
+				width: 40px;
+				height: 40px;
 			}
 		}
 
@@ -285,117 +267,130 @@
 	<div class="container">
 		<header class="header">
 			<h1>Albert Carreras</h1>
-			<p class="subtitle">Engineering Manager - Full-Stack Developer</p>
+			<p class="subtitle">Engineering Manager & Full-Stack Developer</p>
 			<div class="location">
 				<img src="location.svg" alt="Location icon" class="location-icon">
-				Barcelona
+				Barcelona, Spain
 			</div>
 		</header>
 
 		<main class="sections">
 			<section class="section">
 				<div class="section-title">Work</div>
-				<div class="section-content">
-					<div class="links">
-						<a href="https://rover.com" class="link" target="_blank" rel="noopener">
-							<img src="rover.png" alt="Rover.com icon" class="icon">
-							<div>
-								<div class="link-title">Engineering Manager II at Rover</div>
-								<div class="link-description">Leading engineering teams, M&A</div>
-							</div>
-						</a>
-						<a href="#" class="link past-work">
-							<img src="m47.svg" alt="M47 Labs icon" class="icon">
-							<div>
-								<div class="link-title">Engineering Manager at M47 Labs 2024-2025</div>
-								<div class="link-description">Leading engineering teams, building AI solutions</div>
-							</div>
-						</a>
-						<a href="https://triskale.com" class="link past-work" target="_blank" rel="noopener">
-							<img src="triskale.png" alt="Triskale icon" class="icon">
-							<div>
-								<div class="link-title">Founder at Triskale</div>
-								<div class="link-description">Empowering businesses through AI consulting and custom
-									solutions</div>
-							</div>
-						</a>
-						<a href="https://www.studocu.com" class="link past-work" target="_blank" rel="noopener">
-							<img src="studocu.jpg" alt="Studocu icon" class="icon">
-							<div>
-								<div class="link-title">Senior Engineering Manager at Studocu 2019-2024</div>
-								<div class="link-description">Led multiple engineering teams, driving educational
-									technology innovation</div>
-							</div>
-						</a>
-					</div>
+				<div class="subsection-title">Now</div>
+				<div class="links">
+					<a href="https://rover.com" class="link" target="_blank" rel="noopener">
+						<img src="rover.png" alt="Rover.com icon" class="icon">
+						<div>
+							<div class="link-title">Engineering Manager II, Rover</div>
+							<div class="link-description">Managing engineering teams across the Rover marketplace.
+								Focused on M&A integration.</div>
+						</div>
+					</a>
+				</div>
+				<div class="subsection-title">Previously</div>
+				<div class="links">
+					<a href="#" class="link">
+						<img src="m47.svg" alt="M47 Labs icon" class="icon">
+						<div>
+							<div class="link-title">Engineering Manager, M47 Labs <span
+									class="link-date">2024–2025</span></div>
+							<div class="link-description">Managed engineering for an AI consultancy. Built and shipped
+								ML products for enterprise clients.</div>
+						</div>
+					</a>
+					<a href="https://triskale.com" class="link" target="_blank" rel="noopener">
+						<img src="triskale.png" alt="Triskale icon" class="icon">
+						<div>
+							<div class="link-title">Founder, Triskale</div>
+							<div class="link-description">Independent consulting. Full-stack development and technical
+								strategy for startups.</div>
+						</div>
+					</a>
+					<a href="https://www.studocu.com" class="link" target="_blank" rel="noopener">
+						<img src="studocu.jpg" alt="Studocu icon" class="icon">
+						<div>
+							<div class="link-title">Senior Engineering Manager, Studocu <span
+									class="link-date">2019–2024</span></div>
+							<div class="link-description">Led multiple engineering teams building the largest student
+								document platform.</div>
+						</div>
+					</a>
 				</div>
 			</section>
 
 			<section class="section">
 				<div class="section-title">Projects</div>
-				<div class="section-content">
-					<div class="links">
-						<a href="https://habby.day" class="link" target="_blank" rel="noopener">
-							<img src="habby.png" alt="Habby icon" class="icon">
-							<div>
-								<div class="link-title">Habby</div>
-								<div class="link-description">A simple bullet journal app designed for daily reflection
-									and personal growth</div>
-							</div>
-						</a>
-						<a href="https://goseren.com" class="link past-project" target="_blank" rel="noopener">
-							<img src="seren.png" alt="Seren icon" class="icon">
-							<div>
-								<div class="link-title">Seren - 2024 🪦</div>
-								<div class="link-description">AI journaling platform focused building a knowledge base –
-									discontinued</div>
-							</div>
-						</a>
-						<a href="https://ananas.club" class="link past-project" target="_blank" rel="noopener">
-							<img src="ananas.jpg" alt="Ananas icon" class="icon">
-							<div>
-								<div class="link-title">Ananas - 2020 🪦</div>
-								<div class="link-description">Language exchange platform connecting learners –
-									discontinued</div>
-							</div>
-						</a>
-					</div>
+				<div class="subsection-title">Active</div>
+				<div class="links">
+					<a href="https://colmenita.com" class="link" target="_blank" rel="noopener">
+						<img src="colmena.png" alt="Colmenita icon" class="icon icon-contain">
+						<div>
+							<div class="link-title">Colmenita</div>
+							<div class="link-description">Kids outgrow everything. Families pass it on. No money
+								changes hands.</div>
+						</div>
+					</a>
+					<a href="https://habby.bored.cat" class="link" target="_blank" rel="noopener">
+						<img src="habby.png" alt="Habby icon" class="icon">
+						<div>
+							<div class="link-title">Habby</div>
+							<div class="link-description">Minimal bullet journal app. Daily logs, habit tracking, no
+								fluff.</div>
+						</div>
+					</a>
+				</div>
+				<div class="subsection-title">Discontinued</div>
+				<div class="links">
+					<a href="https://goseren.com" class="link" target="_blank" rel="noopener">
+						<img src="seren.png" alt="Seren icon" class="icon">
+						<div>
+							<div class="link-title">Seren <span class="link-date">2024</span></div>
+							<div class="link-description">AI journaling app that turned entries into a searchable
+								personal knowledge base.</div>
+						</div>
+					</a>
+					<a href="https://ananas.club" class="link" target="_blank" rel="noopener">
+						<img src="ananas.jpg" alt="Ananas icon" class="icon">
+						<div>
+							<div class="link-title">Ananas <span class="link-date">2020</span></div>
+							<div class="link-description">Language exchange platform that matched learners by level and
+								availability.</div>
+						</div>
+					</a>
 				</div>
 			</section>
 
 			<section class="section">
 				<div class="section-title">Connect</div>
-				<div class="section-content">
-					<div class="links">
-						<a href="https://www.linkedin.com/in/albcarreras/" class="link" target="_blank" rel="noopener">
-							<img src="linkedin.gif" alt="LinkedIn icon" class="icon gif">
-							<div>
-								<div class="link-title">LinkedIn</div>
-								<div class="link-description">Check my complete career and connect!</div>
-							</div>
-						</a>
-						<a href="https://github.com/albert-carreras" class="link" target="_blank" rel="noopener">
-							<img src="github.gif" alt="GitHub icon" class="icon gif">
-							<div>
-								<div class="link-title">GitHub</div>
-								<div class="link-description">Check personal projects and open source contributions
-								</div>
-							</div>
-						</a>
-						<a href="mailto:me@bored.cat" class="link">
-							<img src="email.gif" alt="Email icon" class="icon gif">
-							<div>
-								<div class="link-title">Email</div>
-								<div class="link-description">me@bored.cat</div>
-							</div>
-						</a>
-					</div>
+				<div class="links">
+					<a href="https://www.linkedin.com/in/albcarreras/" class="link" target="_blank" rel="noopener">
+						<img src="linkedin.gif" alt="LinkedIn icon" class="icon gif">
+						<div>
+							<div class="link-title">LinkedIn</div>
+							<div class="link-description">Full career history and professional network</div>
+						</div>
+					</a>
+					<a href="https://github.com/albert-carreras" class="link" target="_blank" rel="noopener">
+						<img src="github.gif" alt="GitHub icon" class="icon gif">
+						<div>
+							<div class="link-title">GitHub</div>
+							<div class="link-description">Side projects and open source work</div>
+						</div>
+					</a>
+					<a href="mailto:me@bored.cat" class="link">
+						<img src="email.gif" alt="Email icon" class="icon gif">
+						<div>
+							<div class="link-title">Email</div>
+							<div class="link-description">me@bored.cat</div>
+						</div>
+					</a>
 				</div>
 			</section>
 		</main>
 
 		<footer>
-			<p>©
+			<p>&copy;
 				<script>document.write(new Date().getFullYear())</script> Albert Carreras
 			</p>
 		</footer>
